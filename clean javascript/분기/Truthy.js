@@ -20,3 +20,4 @@ function greet(name){
 
 const safeName = name || '이름없음';
 const show = isReady && render();
+

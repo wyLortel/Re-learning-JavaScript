@@ -1,0 +1,48 @@
+main,
+section,
+article,
+div {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
+
+section {
+  background-color: blueviolet;
+}
+
+article {
+  background-color: bisque;
+}
+
+div {
+  background-color: brown;
+}
+
+.rel {
+  position: relative;
+  right: 100px;
+}
+
+.ab {
+  position: absolute;
+  background-color: gray;
+  top: 0;
+}
+
+.fix {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sti {
+  position: sticky;
+  background-color: aquamarine;
+}

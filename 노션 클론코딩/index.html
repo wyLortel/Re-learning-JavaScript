@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바닐라 js 노션 클론코딩</title>
+
+    <!-- inter 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mochiy+Pop+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- sider -->
+      <!-- id js에서 고유 식별자 class 스타일 적용 id = 유일한 식별 class 공통 규칙 -->
+      <aside id="sidebar" class="sider">
+        <div class="inner">
+          <!-- 사이드바를 접거나 펼치기 -->
+          <button id="collapseBtn" class="collapse" title="Collapse"><<</button>
+
+          <!-- 유저 -->
+          <div class="user-box">
+            <div class="avatar">/</div>
+            <div class="user-meta">
+              <strong>Guest</strong>
+              <small>guest@example.com</small>
+            </div>
+          </div>
+
+          <!-- 액션 -->
+          <div class="nav-items">
+            <div class="item" id="actionSearch">
+              <span>Search</span>
+              <div class="rigth">
+                <span class="kdd">⌘</span>
+                <span class="kdd">k</span>
+              </div>
+            </div>
+
+            <div class="item" id="actionSettings">
+              <span>settings</span>
+            </div>
+
+            <div class="item" id="actionCreatRoot">
+              <span>New page</span>
+            </div>
+          </div>
+
+          <!-- 문서 목록 표시 -->
+          <div class="group-title">All pages</div>
+          <div id="docListRoot" class="doc-list"></div>
+          <div class="item" id="actionAddPage">
+            <span>Add a page</span>
+          </div>
+        </div>
+
+        <!-- 문서 삭제 통 -->
+        <div></div>
+      </aside>
+    </div>
+  </body>
 </html>
