@@ -100,25 +100,61 @@ const user: User2 = {
 //   }
 // }
 
-interface Quackable {
-  quack(): void;
-}
+// interface Quackable {
+//   quack(): void;
+// }
 
-class Duck implements Quackable {
-  quack() {
-    console.log("Quack");
-  }
-}
+// class Duck implements Quackable {
+//   quack() {
+//     console.log("Quack");
+//   }
+// }
 
-class Robbot implements Quackable {
-  quack() {
-    console.log("Robbot Quack");
-  }
-}
+// class Robbot implements Quackable {
+//   quack() {
+//     console.log("Robbot Quack");
+//   }
+// }
 
-function makeItQuack(animal: Quackable) {
-  animal.quack();
-}
+// function makeItQuack(animal: Quackable) {
+//   animal.quack();
+// }
 
-makeItQuack(new Duck());
-makeItQuack(new Robbot());
+// makeItQuack(new Duck());
+// makeItQuack(new Robbot());
+
+// const dogToHuman = (n: number): boolean => {
+//   const dogAge = 20 + (n - 2) * 7;
+//   if (dogAge <= 60) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// };
+
+// const catToHuman = (n: number): boolean => {
+//   const dogAge = 24 + (n - 2) * 4;
+//   if (dogAge <= 60) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// };
+
+const dogToHuman = (dogAge: number): number => 20 + (dogAge - 2) * 7;
+
+const catToHuman = (catAge: number): number => 24 + (catAge - 2) * 4;
+
+const qualifiedForInsurance = (
+  convertAge: (age: number) => number, // 변환 함수
+  animalAge: number // 동물 나이
+): boolean => {
+  const humanAge = convertAge(animalAge);
+  return humanAge <= 60;
+};
+
+console.log(qualifiedForInsurance(dogToHuman, 7)); 
+console.log(qualifiedForInsurance(dogToHuman, 8)); 
+
+console.log(qualifiedForInsurance(catToHuman, 11)); 
+console.log(qualifiedForInsurance(catToHuman, 12)); 

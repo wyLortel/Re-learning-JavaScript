@@ -74,3 +74,55 @@ class Plant {
     }
   }
 }
+
+const plant1 = new Plant("Rose", 10, 1);
+console.log(plant1.photosynthesize(6));
+console.log(plant1.absorbWater(0));
+
+const plant2 = new Plant("Oak", 200, 50);
+console.log(plant2.photosynthesize(10));
+console.log(plant2.absorbWater(2));
+
+const plant3 = new Plant("Cactus", 30, 100);
+console.log(plant3.photosynthesize(15));
+console.log(plant3.absorbWater(3));
+
+function federalTax(income: number): number {
+  return income * 0.21;
+}
+
+function printTaxByState(state: string) {
+  const stateRates: Record<string, number> = {
+    Arizona: 0.049,
+    California: 0.088,
+    Northcarolina: 0.025,
+  };
+
+  const stateRate = stateRates[state];
+
+  if (stateRate === undefined) {
+    throw new Error(`State "${state}" is not supported.`);
+  }
+
+  return function (income: number): void {
+    const federal = federalTax(income);
+    const stateTax = income * stateRate;
+    const total = federal + stateTax;
+
+    console.log(`Federal Tax: ${federal}`);
+    console.log(`${state} State Tax: ${stateTax}`);
+    console.log(`Tax Amount: ${total}`);
+  };
+}
+
+function swapCase(charList: string[]): string[] {
+  // 関数を完成させてください
+  return charList.map((ch) =>
+    ch === ch.toUpperCase() ? ch.toLowerCase() : ch.toUpperCase()
+  );
+}
+
+function ageCheck(ages: number[]): number[] {
+  // 関数を完成させてください
+  return ages.filter((age) => age > 18);
+}
